@@ -25,7 +25,7 @@ body {
 }
 
 .container {
-    max-width: 1400px;
+    max-width: 2800px;
     margin: 0 auto;
     padding: 20px;
 }
@@ -99,22 +99,78 @@ header .last-updated {
     color: var(--primary-color);
 }
 
-/* Activity Selector */
-.activity-selector {
+/* Filter Section */
+.filter-section {
+    background: var(--card-background);
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.filter-group {
+    margin-bottom: 20px;
+}
+
+.filter-group:last-child {
+    margin-bottom: 0;
+}
+
+.filter-label {
+    display: block;
+    font-size: 0.95em;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Date Filter */
+.date-filter {
     display: flex;
     gap: 10px;
-    margin-bottom: 40px;
     flex-wrap: wrap;
 }
 
-.tab-button {
-    padding: 12px 24px;
+.date-button {
+    padding: 10px 20px;
     border: 2px solid var(--border-color);
     background: var(--card-background);
     color: var(--text-primary);
     border-radius: 8px;
     cursor: pointer;
-    font-size: 1em;
+    font-size: 0.95em;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.date-button:hover {
+    border-color: var(--info-color);
+    color: var(--info-color);
+}
+
+.date-button.active {
+    background: var(--info-color);
+    color: white;
+    border-color: var(--info-color);
+}
+
+/* Activity Selector */
+.activity-selector {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.tab-button {
+    padding: 10px 20px;
+    border: 2px solid var(--border-color);
+    background: var(--card-background);
+    color: var(--text-primary);
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.95em;
     font-weight: 500;
     transition: all 0.3s;
 }

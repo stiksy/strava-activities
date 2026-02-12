@@ -1,6 +1,7 @@
 // Global data storage
 let activitiesData = null;
 let currentFilter = 'all';
+let currentDateRange = 30; // Default to last 30 days
 let charts = {};
 
 // Format helpers
@@ -51,6 +52,36 @@ function formatDateTime(dateString) {
     });
 }
 
+// Filter activities by date range
+function filterActivitiesByDate(activities) {
+    if (currentDateRange === 'all') {
+        return activities;
+    }
+
+    const now = new Date();
+    const cutoffDate = new Date(now.getTime() - (currentDateRange * 24 * 60 * 60 * 1000));
+
+    return activities.filter(activity => {
+        const activityDate = new Date(activity.start_date);
+        return activityDate >= cutoffDate;
+    });
+}
+
+// Get filtered activities (by both date and activity type)
+function getFilteredActivities() {
+    let filtered = activitiesData.activities;
+
+    // Apply date filter
+    filtered = filterActivitiesByDate(filtered);
+
+    // Apply activity type filter
+    if (currentFilter !== 'all') {
+        filtered = filtered.filter(a => a.type === currentFilter);
+    }
+
+    return filtered;
+}
+
 // Load data
 async function loadData() {
     try {
@@ -63,7 +94,7 @@ async function loadData() {
 
         // Initialize the dashboard
         updateSummaryCards();
-        populateTable(data.activities);
+        populateTable();
         createCharts();
         updateStatistics();
 
@@ -76,23 +107,26 @@ async function loadData() {
 
 // Update summary cards
 function updateSummaryCards() {
-    const stats = activitiesData.statistics;
-    document.getElementById('totalActivities').textContent = stats.total_activities;
-    document.getElementById('totalDistance').textContent = formatDistance(stats.total_distance);
-    document.getElementById('totalTime').textContent = formatTime(stats.total_time);
-    document.getElementById('totalElevation').textContent = Math.round(stats.total_elevation) + ' m';
+    const filtered = getFilteredActivities();
+
+    const totalActivities = filtered.length;
+    const totalDistance = filtered.reduce((sum, a) => sum + a.distance, 0);
+    const totalTime = filtered.reduce((sum, a) => sum + a.moving_time, 0);
+    const totalElevation = filtered.reduce((sum, a) => sum + a.total_elevation_gain, 0);
+
+    document.getElementById('totalActivities').textContent = totalActivities;
+    document.getElementById('totalDistance').textContent = formatDistance(totalDistance);
+    document.getElementById('totalTime').textContent = formatTime(totalTime);
+    document.getElementById('totalElevation').textContent = Math.round(totalElevation) + ' m';
 }
 
 // Populate activities table
-function populateTable(activities) {
+function populateTable() {
     const tbody = document.getElementById('activitiesTableBody');
     tbody.innerHTML = '';
 
-    // Filter activities based on current filter
-    let filteredActivities = activities;
-    if (currentFilter !== 'all') {
-        filteredActivities = activities.filter(a => a.type === currentFilter);
-    }
+    // Get filtered activities (by date and activity type)
+    let filteredActivities = getFilteredActivities();
 
     // Apply search filter
     const searchTerm = document.getElementById('searchInput')?.value.toLowerCase() || '';
@@ -205,9 +239,8 @@ function createCharts() {
 function createDistanceChart() {
     const ctx = document.getElementById('distanceChart');
 
-    // Get activities sorted by date
-    const activities = [...activitiesData.activities]
-        .filter(a => currentFilter === 'all' || a.type === currentFilter)
+    // Get filtered activities sorted by date
+    const activities = [...getFilteredActivities()]
         .sort((a, b) => new Date(a.start_date) - new Date(b.start_date));
 
     const labels = activities.map(a => formatDate(a.start_date));
@@ -248,9 +281,8 @@ function createDistanceChart() {
 function createWeeklyVolumeChart() {
     const ctx = document.getElementById('weeklyVolumeChart');
 
-    // Group activities by week
-    const activities = activitiesData.activities
-        .filter(a => currentFilter === 'all' || a.type === currentFilter);
+    // Group filtered activities by week
+    const activities = getFilteredActivities();
 
     const weeklyData = {};
 
@@ -326,7 +358,7 @@ function createWeeklyVolumeChart() {
 function createPowerChart() {
     const ctx = document.getElementById('powerChart');
 
-    const activities = [...activitiesData.activities]
+    const activities = [...getFilteredActivities()]
         .filter(a => (a.type === 'Ride' || a.type === 'VirtualRide') && a.device_watts && a.average_watts)
         .sort((a, b) => new Date(a.start_date) - new Date(b.start_date));
 
@@ -374,7 +406,7 @@ function createPowerChart() {
 function createPowerDistributionChart() {
     const ctx = document.getElementById('powerDistributionChart');
 
-    const activities = activitiesData.activities
+    const activities = getFilteredActivities()
         .filter(a => (a.type === 'Ride' || a.type === 'VirtualRide') && a.device_watts && a.average_watts);
 
     if (activities.length === 0) {
@@ -435,7 +467,7 @@ function createPowerDistributionChart() {
 function createPaceChart() {
     const ctx = document.getElementById('paceChart');
 
-    const activities = [...activitiesData.activities]
+    const activities = [...getFilteredActivities()]
         .filter(a => a.type === 'Run' && a.average_speed > 0)
         .sort((a, b) => new Date(a.start_date) - new Date(b.start_date));
 
@@ -478,7 +510,7 @@ function createPaceChart() {
 function createHeartRateChart() {
     const ctx = document.getElementById('heartRateChart');
 
-    const activities = [...activitiesData.activities]
+    const activities = [...getFilteredActivities()]
         .filter(a => a.type === 'Run' && a.has_heartrate && a.average_heartrate)
         .sort((a, b) => new Date(a.start_date) - new Date(b.start_date));
 
@@ -530,7 +562,7 @@ function updateStatistics() {
 }
 
 function updateCyclingStats() {
-    const cyclingActivities = activitiesData.activities.filter(a =>
+    const cyclingActivities = getFilteredActivities().filter(a =>
         a.type === 'Ride' || a.type === 'VirtualRide'
     );
 
@@ -581,7 +613,7 @@ function updateCyclingStats() {
 }
 
 function updateRunningStats() {
-    const runningActivities = activitiesData.activities.filter(a => a.type === 'Run');
+    const runningActivities = getFilteredActivities().filter(a => a.type === 'Run');
 
     if (runningActivities.length === 0) {
         document.getElementById('runningStats').innerHTML = '<p>No running activities found</p>';
@@ -636,9 +668,31 @@ function updateRunningStats() {
     document.getElementById('runningStats').innerHTML = html;
 }
 
+// Refresh all data based on current filters
+function refreshData() {
+    updateSummaryCards();
+    populateTable();
+    createDistanceChart();
+    createWeeklyVolumeChart();
+    updateStatistics();
+}
+
 // Event listeners
 document.addEventListener('DOMContentLoaded', () => {
     loadData();
+
+    // Date filter buttons
+    document.querySelectorAll('.date-button').forEach(button => {
+        button.addEventListener('click', (e) => {
+            document.querySelectorAll('.date-button').forEach(b => b.classList.remove('active'));
+            e.target.classList.add('active');
+
+            const days = e.target.dataset.days;
+            currentDateRange = days === 'all' ? 'all' : parseInt(days);
+
+            refreshData();
+        });
+    });
 
     // Tab buttons
     document.querySelectorAll('.tab-button').forEach(button => {
@@ -660,19 +714,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.getElementById('runningCharts').style.display = 'none';
             }
 
-            populateTable(activitiesData.activities);
-            createDistanceChart();
-            createWeeklyVolumeChart();
+            refreshData();
         });
     });
 
     // Search input
     document.getElementById('searchInput').addEventListener('input', () => {
-        populateTable(activitiesData.activities);
+        populateTable();
     });
 
     // Sort select
     document.getElementById('sortSelect').addEventListener('change', () => {
-        populateTable(activitiesData.activities);
+        populateTable();
     });
 });

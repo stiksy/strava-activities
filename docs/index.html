@@ -47,12 +47,27 @@
             </div>
         </section>
 
-        <!-- Activity Type Selector -->
-        <section class="activity-selector">
-            <button class="tab-button active" data-type="all">All Activities</button>
-            <button class="tab-button" data-type="Ride">🚴 Cycling</button>
-            <button class="tab-button" data-type="VirtualRide">🚴 Virtual Cycling</button>
-            <button class="tab-button" data-type="Run">🏃 Running</button>
+        <!-- Date Range Filter -->
+        <section class="filter-section">
+            <div class="filter-group">
+                <label class="filter-label">📅 Time Period:</label>
+                <div class="date-filter">
+                    <button class="date-button active" data-days="30">Last 30 Days</button>
+                    <button class="date-button" data-days="90">Last 90 Days</button>
+                    <button class="date-button" data-days="180">Last 180 Days</button>
+                    <button class="date-button" data-days="365">Last Year</button>
+                    <button class="date-button" data-days="all">All Time</button>
+                </div>
+            </div>
+            <div class="filter-group">
+                <label class="filter-label">🏃 Activity Type:</label>
+                <div class="activity-selector">
+                    <button class="tab-button active" data-type="all">All Activities</button>
+                    <button class="tab-button" data-type="Ride">🚴 Cycling</button>
+                    <button class="tab-button" data-type="VirtualRide">🚴 Virtual Cycling</button>
+                    <button class="tab-button" data-type="Run">🏃 Running</button>
+                </div>
+            </div>
         </section>
 
         <!-- Charts Section -->
