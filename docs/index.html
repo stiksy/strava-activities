@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Tracker - Strava Activities</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏃‍♂️ Fitness Tracker</h1>
+            <p class="subtitle">Training Progress & Analytics</p>
+            <p class="last-updated">Last updated: <span id="lastUpdated">Loading...</span></p>
+        </header>
+
+        <!-- Summary Cards -->
+        <section class="summary-cards">
+            <div class="card">
+                <div class="card-icon">🎯</div>
+                <div class="card-content">
+                    <h3>Total Activities</h3>
+                    <p class="card-value" id="totalActivities">-</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-icon">📏</div>
+                <div class="card-content">
+                    <h3>Total Distance</h3>
+                    <p class="card-value" id="totalDistance">-</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-icon">⏱️</div>
+                <div class="card-content">
+                    <h3>Total Time</h3>
+                    <p class="card-value" id="totalTime">-</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-icon">⛰️</div>
+                <div class="card-content">
+                    <h3>Total Elevation</h3>
+                    <p class="card-value" id="totalElevation">-</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Activity Type Selector -->
+        <section class="activity-selector">
+            <button class="tab-button active" data-type="all">All Activities</button>
+            <button class="tab-button" data-type="Ride">🚴 Cycling</button>
+            <button class="tab-button" data-type="VirtualRide">🚴 Virtual Cycling</button>
+            <button class="tab-button" data-type="Run">🏃 Running</button>
+        </section>
+
+        <!-- Charts Section -->
+        <section class="charts-section">
+            <div class="chart-container">
+                <h2>Distance Over Time</h2>
+                <canvas id="distanceChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <h2>Weekly Volume</h2>
+                <canvas id="weeklyVolumeChart"></canvas>
+            </div>
+        </section>
+
+        <!-- Cycling Specific Charts -->
+        <section id="cyclingCharts" class="charts-section" style="display: none;">
+            <div class="chart-container">
+                <h2>Power Progression</h2>
+                <canvas id="powerChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <h2>Power Distribution</h2>
+                <canvas id="powerDistributionChart"></canvas>
+            </div>
+        </section>
+
+        <!-- Running Specific Charts -->
+        <section id="runningCharts" class="charts-section" style="display: none;">
+            <div class="chart-container">
+                <h2>Pace Progression</h2>
+                <canvas id="paceChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <h2>Heart Rate Analysis</h2>
+                <canvas id="heartRateChart"></canvas>
+            </div>
+        </section>
+
+        <!-- Activities Table -->
+        <section class="table-section">
+            <h2>Recent Activities</h2>
+            <div class="table-controls">
+                <input type="text" id="searchInput" placeholder="Search activities...">
+                <select id="sortSelect">
+                    <option value="date-desc">Date (Newest)</option>
+                    <option value="date-asc">Date (Oldest)</option>
+                    <option value="distance-desc">Distance (Longest)</option>
+                    <option value="distance-asc">Distance (Shortest)</option>
+                    <option value="time-desc">Time (Longest)</option>
+                    <option value="time-asc">Time (Shortest)</option>
+                </select>
+            </div>
+            <div class="table-wrapper">
+                <table id="activitiesTable">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Activity</th>
+                            <th>Type</th>
+                            <th>Distance</th>
+                            <th>Time</th>
+                            <th>Elevation</th>
+                            <th>Avg Speed</th>
+                            <th class="cycling-col">Avg Power</th>
+                            <th class="running-col">Avg Pace</th>
+                            <th>Avg HR</th>
+                        </tr>
+                    </thead>
+                    <tbody id="activitiesTableBody">
+                        <tr>
+                            <td colspan="10" class="loading">Loading activities...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Statistics Section -->
+        <section class="stats-section">
+            <div class="stat-card">
+                <h3>🚴 Cycling Stats</h3>
+                <div id="cyclingStats" class="stat-content">Loading...</div>
+            </div>
+            <div class="stat-card">
+                <h3>🏃 Running Stats</h3>
+                <div id="runningStats" class="stat-content">Loading...</div>
+            </div>
+        </section>
+
+        <footer>
+            <p>Powered by Strava API | Data updates when you run the Python script</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
