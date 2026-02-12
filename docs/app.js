@@ -69,6 +69,10 @@ function filterActivitiesByDate(activities) {
 
 // Get filtered activities (by both date and activity type)
 function getFilteredActivities() {
+    if (!activitiesData || !activitiesData.activities) {
+        return [];
+    }
+
     let filtered = activitiesData.activities;
 
     // Apply date filter
@@ -670,10 +674,25 @@ function updateRunningStats() {
 
 // Refresh all data based on current filters
 function refreshData() {
+    if (!activitiesData) {
+        console.warn('Data not loaded yet');
+        return;
+    }
+
     updateSummaryCards();
     populateTable();
     createDistanceChart();
     createWeeklyVolumeChart();
+
+    // Refresh sport-specific charts if they're visible
+    if (currentFilter === 'Ride' || currentFilter === 'VirtualRide') {
+        createPowerChart();
+        createPowerDistributionChart();
+    } else if (currentFilter === 'Run') {
+        createPaceChart();
+        createHeartRateChart();
+    }
+
     updateStatistics();
 }
 
