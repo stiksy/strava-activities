@@ -148,6 +148,8 @@ This prevents memory leaks and duplicate chart instances.
 
 **CRITICAL**: Always monitor GitHub Actions after every push to capture failures and confirm deployment completion.
 
+**Required Permissions**: Ensure `gh run list` and `gh run watch` are whitelisted in your Claude Code permissions/settings.
+
 ```bash
 # Check status of recent runs
 gh run list --limit 5
