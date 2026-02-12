@@ -154,10 +154,10 @@ This prevents memory leaks and duplicate chart instances.
 # Check status of recent runs
 gh run list --limit 5
 
-# Watch the latest run (auto-detects most recent)
-gh run watch $(gh run list --limit 1 --json databaseId --jq '.[0].databaseId') --exit-status
+# Get the latest run ID
+gh run list --limit 1
 
-# Watch a specific run by ID
+# Watch a specific run by ID (copy ID from above)
 gh run watch <run-id> --exit-status
 
 # View detailed logs if a run fails
@@ -168,9 +168,12 @@ The `--exit-status` flag ensures the command exits with non-zero status if the r
 
 **Typical workflow:**
 1. Push code with `git push`
-2. Immediately run `gh run watch $(gh run list --limit 1 --json databaseId --jq '.[0].databaseId') --exit-status`
-3. Wait for "pages build and deployment" to complete (usually 1-2 minutes)
-4. Verify changes at https://stiksy.github.io/strava-activities/
+2. Check the latest run: `gh run list --limit 1`
+3. Watch it complete: `gh run watch <run-id> --exit-status` (use the ID from step 2)
+4. Wait for "pages build and deployment" to complete (usually 1-2 minutes)
+5. Verify changes at https://stiksy.github.io/strava-activities/
+
+**Note**: Use separate commands instead of complex subshells for better permission matching.
 
 ## Strava API Notes
 
