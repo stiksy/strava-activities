@@ -371,6 +371,8 @@ function createPowerChart() {
         return;
     }
 
+    ctx.parentElement.style.display = 'block';
+
     const labels = activities.map(a => formatDate(a.start_date));
     const avgPower = activities.map(a => a.average_watts);
     const maxPower = activities.map(a => a.max_watts);
@@ -417,6 +419,8 @@ function createPowerDistributionChart() {
         ctx.parentElement.style.display = 'none';
         return;
     }
+
+    ctx.parentElement.style.display = 'block';
 
     // Create power zones
     const powerValues = activities.map(a => a.average_watts);
@@ -480,6 +484,8 @@ function createPaceChart() {
         return;
     }
 
+    ctx.parentElement.style.display = 'block';
+
     const labels = activities.map(a => formatDate(a.start_date));
     const paces = activities.map(a => 1000 / a.average_speed / 60); // min/km
 
@@ -522,6 +528,8 @@ function createHeartRateChart() {
         ctx.parentElement.style.display = 'none';
         return;
     }
+
+    ctx.parentElement.style.display = 'block';
 
     const labels = activities.map(a => formatDate(a.start_date));
     const avgHR = activities.map(a => a.average_heartrate);
@@ -684,11 +692,17 @@ function refreshData() {
     createDistanceChart();
     createWeeklyVolumeChart();
 
-    // Refresh sport-specific charts if they're visible
+    // Refresh sport-specific charts based on current filter
     if (currentFilter === 'Ride' || currentFilter === 'VirtualRide') {
         createPowerChart();
         createPowerDistributionChart();
     } else if (currentFilter === 'Run') {
+        createPaceChart();
+        createHeartRateChart();
+    } else {
+        // When showing all activities, create all sport-specific charts
+        createPowerChart();
+        createPowerDistributionChart();
         createPaceChart();
         createHeartRateChart();
     }
