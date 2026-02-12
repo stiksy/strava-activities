@@ -5,9 +5,7 @@
       "Bash(git commit:*)",
       "Bash(git add:*)",
       "Bash(git push:*)",
-      "Bash(gh run list:*)",
-      "Bash(gh run watch:*)",
-      "Bash(gh run view:*)"
+      "Bash(gh:*)"
     ]
   }
 }
