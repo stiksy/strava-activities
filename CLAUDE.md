@@ -43,7 +43,15 @@ python fetch_and_export.py
 git add docs/data/activities.json
 git commit -m "Update activities data"
 git push
-# GitHub Pages auto-deploys from /docs folder
+
+# IMPORTANT: Always monitor GitHub Actions after pushing
+gh run list --limit 5                    # Check recent runs
+gh run watch <run-id> --exit-status      # Watch specific run, exit non-zero on failure
+# Or use the run ID from the latest push:
+gh run watch $(gh run list --limit 1 --json databaseId --jq '.[0].databaseId') --exit-status
+
+# GitHub Pages deploys from /docs folder, typically completes in 1-2 minutes
+# Verify deployment at: https://stiksy.github.io/strava-activities/
 ```
 
 ## Architecture
@@ -133,8 +141,34 @@ This prevents memory leaks and duplicate chart instances.
 
 - Deployed from `main` branch, `/docs` folder
 - Auto-updates 2-3 minutes after push
-- URL pattern: `https://username.github.io/strava-activities/`
+- URL pattern: `https://stiksy.github.io/strava-activities/`
 - No build step required (vanilla HTML/CSS/JS)
+
+## GitHub Actions Monitoring
+
+**CRITICAL**: Always monitor GitHub Actions after every push to capture failures and confirm deployment completion.
+
+```bash
+# Check status of recent runs
+gh run list --limit 5
+
+# Watch the latest run (auto-detects most recent)
+gh run watch $(gh run list --limit 1 --json databaseId --jq '.[0].databaseId') --exit-status
+
+# Watch a specific run by ID
+gh run watch <run-id> --exit-status
+
+# View detailed logs if a run fails
+gh run view <run-id> --log-failed
+```
+
+The `--exit-status` flag ensures the command exits with non-zero status if the run fails, which is important for catching deployment issues immediately.
+
+**Typical workflow:**
+1. Push code with `git push`
+2. Immediately run `gh run watch $(gh run list --limit 1 --json databaseId --jq '.[0].databaseId') --exit-status`
+3. Wait for "pages build and deployment" to complete (usually 1-2 minutes)
+4. Verify changes at https://stiksy.github.io/strava-activities/
 
 ## Strava API Notes
 
