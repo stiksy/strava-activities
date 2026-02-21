@@ -1,0 +1,238 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Fernando Training Plan (Peak Taper Event Weeks 9-12)//ChatGPT//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:20260419-6218800404@trainingplan
+DTSTAMP:20260221T120000Z
+DTSTART;TZID=Europe/London:20260419T160000
+DTEND;TZID=Europe/London:20260419T191500
+SUMMARY:Bike: Long Ride 3.2 h
+DESCRIPTION:Goal: Endurance and pacing.\n\nWarm-up: 10 min easy (RPE 3-4)\nMain set: Ride 195 min mostly easy (RPE 3-4). On climbs cap at RPE 6-7 and keep cadence 75-85 rpm.\nCool-down: 5-10 min very easy.\n\nAdd late-ride focus: in the final 30 min include 2x10 min at Tempo (RPE 5-6) with 5 min easy between if you feel good.\n\nRPE guide: Easy 3-4 (full sentences). Tempo 5-6 (short sentences). Hard 7-8 (few words).\nOptional power targets (FTP~130W): Easy 90-110W. Tempo 110-125W. Hard 125-140W.\nCadence: flats 80-90 rpm. Climbs 75-85 rpm. Shift early. Keep climbs smooth (avoid surges).\nFueling: <90 min water. >=90 min aim 30-60 g carbs/hour plus water and electrolytes. Start within 20 min then every ~15 min.
+END:VEVENT
+BEGIN:VEVENT
+UID:20260420-8113432280@trainingplan
+DTSTAMP:20260221T120000Z
+DTSTART;TZID=Europe/London:20260420T120000
+DTEND;TZID=Europe/London:20260420T123000
+SUMMARY:Strength A + Mobility (30 min)
+DESCRIPTION:Strength A (20-30 min)\n1) Goblet squat 3x8-10\n2) DB Romanian deadlift 3x8-10\n3) Split squat 2x8/side\n4) Plank 3x30-45s\n5) Dead bug 2x8/side\nLeave ~2 reps in reserve. Smooth form. No grinding.\n\nMobility (8-10 min)\nHip flexor lunge stretch. Calf stretch (straight and bent knee). Glute stretch. Thoracic openers (open book). Hamstring floss. Child's pose to cobra flow.
+END:VEVENT
+BEGIN:VEVENT
+UID:20260421-3804457602@trainingplan
+DTSTAMP:20260221T120000Z
+DTSTART;TZID=Europe/London:20260421T120000
+DTEND;TZID=Europe/London:20260421T130500
+SUMMARY:Bike: Threshold 3x8' (65 min)
+DESCRIPTION:Goal: Threshold maintenance.\n\nWarm-up: 10 min easy\nMain set: 3x8 min Hard (RPE 7-8) with 5 min easy. Smooth, controlled.\nCool-down: 5-10 min very easy.\n\nRPE guide: Easy 3-4 (full sentences). Tempo 5-6 (short sentences). Hard 7-8 (few words).\nOptional power targets (FTP~130W): Easy 90-110W. Tempo 110-125W. Hard 125-140W.\nCadence: flats 80-90 rpm. Climbs 75-85 rpm. Shift early. Keep climbs smooth (avoid surges).\nFueling: <90 min water. >=90 min aim 30-60 g carbs/hour plus water and electrolytes. Start within 20 min then every ~15 min.
+END:VEVENT
+BEGIN:VEVENT
+UID:20260422-3998231082@trainingplan
+DTSTAMP:20260221T120000Z
+DTSTART;TZID=Europe/London:20260422T120000
+DTEND;TZID=Europe/London:20260422T124500
+SUMMARY:Walk: Brisk 45 min
+DESCRIPTION:Walk 45 min brisk but comfortable.\nOptional: add 5x30s quicker strides with full recovery.\n\nPurpose: low-stress calorie burn and recovery support.
+END:VEVENT
+BEGIN:VEVENT
+UID:20260423-4665110441@trainingplan
+DTSTAMP:20260221T120000Z
+DTSTART;TZID=Europe/London:20260423T120000
+DTEND;TZID=Europe/London:20260423T130000
+SUMMARY:Bike: Easy 60 min + Cadence
+DESCRIPTION:Goal: Aerobic base and cadence.\n\nWarm-up: 10 min easy\nMain set: Ride 60 min easy (RPE 3-4). Add 6x2 min at 90 rpm (easy watts) with 2 min easy.\nCool-down: 5-10 min very easy.\n\nRPE guide: Easy 3-4 (full sentences). Tempo 5-6 (short sentences). Hard 7-8 (few words).\nOptional power targets (FTP~130W): Easy 90-110W. Tempo 110-125W. Hard 125-140W.\nCadence: flats 80-90 rpm. Climbs 75-85 rpm. Shift early. Keep climbs smooth (avoid surges).\nFueling: <90 min water. >=90 min aim 30-60 g carbs/hour plus water and electrolytes. Start within 20 min then every ~15 min.
+END:VEVENT
+BEGIN:VEVENT
+UID:20260424-5415238112@trainingplan
+DTSTAMP:20260221T120000Z
+DTSTART;TZID=Europe/London:20260424T120000
+DTEND;TZID=Europe/London:20260424T123000
+SUMMARY:Strength B + Mobility (30 min)
+DESCRIPTION:Strength B (20-30 min)\n1) Step-ups 3x8/side\n2) KB/DB deadlift 3x8-10\n3) Glute bridge 3x10-12 (pause at top)\n4) Side plank 2x30-45s/side\n5) Pallof press (band) 2x10/side\nDeload: reduce load ~20-30% and/or do 2 sets instead of 3. Keep it easy.\n\nMobility (8-10 min)\nHip flexor lunge stretch. Calf stretch (straight and bent knee). Glute stretch. Thoracic openers (open book). Hamstring floss. Child's pose to cobra flow.
+END:VEVENT
+BEGIN:VEVENT
+UID:20260425-7438737371@trainingplan
+DTSTAMP:20260221T120000Z
+DTSTART;TZID=Europe/London:20260425T090000
+DTEND;TZID=Europe/London:20260425T094000
+SUMMARY:Optional: Easy Spin 40 min
+DESCRIPTION:Optional easy spin 40 min (RPE 2-3). Cadence 85-95 rpm.\nIf tired: swap for a gentle walk or full rest.
+END:VEVENT
+BEGIN:VEVENT
+UID:20260426-6218800404@trainingplan
+DTSTAMP:20260221T120000Z
+DTSTART;TZID=Europe/London:20260426T160000
+DTEND;TZID=Europe/London:20260426T200000
+SUMMARY:Bike: Long Ride 4.0 h
+DESCRIPTION:Goal: Endurance and pacing.\n\nWarm-up: 10 min easy (RPE 3-4)\nMain set: Ride 240 min mostly easy (RPE 3-4). On climbs cap at RPE 6-7 and keep cadence 75-85 rpm.\nCool-down: 5-10 min very easy.\n\nAdd late-ride focus: in the final 30 min include 2x10 min at Tempo (RPE 5-6) with 5 min easy between if you feel good.\n\nRPE guide: Easy 3-4 (full sentences). Tempo 5-6 (short sentences). Hard 7-8 (few words).\nOptional power targets (FTP~130W): Easy 90-110W. Tempo 110-125W. Hard 125-140W.\nCadence: flats 80-90 rpm. Climbs 75-85 rpm. Shift early. Keep climbs smooth (avoid surges).\nFueling: <90 min water. >=90 min aim 30-60 g carbs/hour plus water and electrolytes. Start within 20 min then every ~15 min.
+END:VEVENT
+BEGIN:VEVENT
+UID:20260427-8113432280@trainingplan
+DTSTAMP:20260221T120000Z
+DTSTART;TZID=Europe/London:20260427T120000
+DTEND;TZID=Europe/London:20260427T123000
+SUMMARY:Strength A + Mobility (30 min)
+DESCRIPTION:Strength A (20-30 min)\n1) Goblet squat 3x8-10\n2) DB Romanian deadlift 3x8-10\n3) Split squat 2x8/side\n4) Plank 3x30-45s\n5) Dead bug 2x8/side\nLeave ~2 reps in reserve. Smooth form. No grinding.\n\nMobility (8-10 min)\nHip flexor lunge stretch. Calf stretch (straight and bent knee). Glute stretch. Thoracic openers (open book). Hamstring floss. Child's pose to cobra flow.
+END:VEVENT
+BEGIN:VEVENT
+UID:20260428-6259396826@trainingplan
+DTSTAMP:20260221T120000Z
+DTSTART;TZID=Europe/London:20260428T120000
+DTEND;TZID=Europe/London:20260428T131000
+SUMMARY:Bike: Climb Pacing 3x12' (70 min)
+DESCRIPTION:Goal: Climb pacing practice.\n\nWarm-up: 10 min easy\nMain set: 3x12 min steady (RPE 6-7). Goal: perfectly even effort. Cadence 75-85 rpm.\nCool-down: 5-10 min very easy.\n\nPretend these are your event climbs. No surging at the start.\n\nRPE guide: Easy 3-4 (full sentences). Tempo 5-6 (short sentences). Hard 7-8 (few words).\nOptional power targets (FTP~130W): Easy 90-110W. Tempo 110-125W. Hard 125-140W.\nCadence: flats 80-90 rpm. Climbs 75-85 rpm. Shift early. Keep climbs smooth (avoid surges).\nFueling: <90 min water. >=90 min aim 30-60 g carbs/hour plus water and electrolytes. Start within 20 min then every ~15 min.
+END:VEVENT
+BEGIN:VEVENT
+UID:20260429-3998231082@trainingplan
+DTSTAMP:20260221T120000Z
+DTSTART;TZID=Europe/London:20260429T120000
+DTEND;TZID=Europe/London:20260429T124500
+SUMMARY:Walk: Brisk 45 min
+DESCRIPTION:Walk 45 min brisk but comfortable.\nOptional: add 5x30s quicker strides with full recovery.\n\nPurpose: low-stress calorie burn and recovery support.
+END:VEVENT
+BEGIN:VEVENT
+UID:20260430-4665110441@trainingplan
+DTSTAMP:20260221T120000Z
+DTSTART;TZID=Europe/London:20260430T120000
+DTEND;TZID=Europe/London:20260430T130000
+SUMMARY:Bike: Easy 60 min + Cadence
+DESCRIPTION:Goal: Aerobic base and cadence.\n\nWarm-up: 10 min easy\nMain set: Ride 60 min easy (RPE 3-4). Add 6x2 min at 90 rpm (easy watts) with 2 min easy.\nCool-down: 5-10 min very easy.\n\nRPE guide: Easy 3-4 (full sentences). Tempo 5-6 (short sentences). Hard 7-8 (few words).\nOptional power targets (FTP~130W): Easy 90-110W. Tempo 110-125W. Hard 125-140W.\nCadence: flats 80-90 rpm. Climbs 75-85 rpm. Shift early. Keep climbs smooth (avoid surges).\nFueling: <90 min water. >=90 min aim 30-60 g carbs/hour plus water and electrolytes. Start within 20 min then every ~15 min.
+END:VEVENT
+BEGIN:VEVENT
+UID:20260501-9859383735@trainingplan
+DTSTAMP:20260221T120000Z
+DTSTART;TZID=Europe/London:20260501T120000
+DTEND;TZID=Europe/London:20260501T122000
+SUMMARY:Mobility / Recovery
+DESCRIPTION:Recovery and mobility (15-25 min)\n1) Hip flexor lunge stretch 60s/side\n2) Calf stretch (straight and bent knee) 60s/side\n3) Glute/piriformis stretch 60s/side\n4) Thoracic open book 8 reps/side\n5) Hamstring floss 10 reps/side\n6) Child's pose to cobra flow 8 slow reps\n\nOptional: easy walk 15-30 min if you want to move.
+END:VEVENT
+BEGIN:VEVENT
+UID:20260502-7438737371@trainingplan
+DTSTAMP:20260221T120000Z
+DTSTART;TZID=Europe/London:20260502T090000
+DTEND;TZID=Europe/London:20260502T094000
+SUMMARY:Optional: Easy Spin 40 min
+DESCRIPTION:Optional easy spin 40 min (RPE 2-3). Cadence 85-95 rpm.\nIf tired: swap for a gentle walk or full rest.
+END:VEVENT
+BEGIN:VEVENT
+UID:20260503-6218800404@trainingplan
+DTSTAMP:20260221T120000Z
+DTSTART;TZID=Europe/London:20260503T160000
+DTEND;TZID=Europe/London:20260503T183000
+SUMMARY:Bike: Long Ride 2.5 h
+DESCRIPTION:Goal: Endurance and pacing.\n\nWarm-up: 10 min easy (RPE 3-4)\nMain set: Ride 150 min mostly easy (RPE 3-4). On climbs cap at RPE 6-7 and keep cadence 75-85 rpm.\nCool-down: 5-10 min very easy.\n\nAdd late-ride focus: in the final 30 min include 2x10 min at Tempo (RPE 5-6) with 5 min easy between if you feel good.\n\nRPE guide: Easy 3-4 (full sentences). Tempo 5-6 (short sentences). Hard 7-8 (few words).\nOptional power targets (FTP~130W): Easy 90-110W. Tempo 110-125W. Hard 125-140W.\nCadence: flats 80-90 rpm. Climbs 75-85 rpm. Shift early. Keep climbs smooth (avoid surges).\nFueling: <90 min water. >=90 min aim 30-60 g carbs/hour plus water and electrolytes. Start within 20 min then every ~15 min.
+END:VEVENT
+BEGIN:VEVENT
+UID:20260504-6009836756@trainingplan
+DTSTAMP:20260221T120000Z
+DTSTART;TZID=Europe/London:20260504T120000
+DTEND;TZID=Europe/London:20260504T122500
+SUMMARY:Core + Mobility (25 min)
+DESCRIPTION:Core + mobility 25 min.\nCore: plank 3x30-45s, side plank 2x30-45s/side, dead bug 2x8/side.\nMobility: hips, calves, glutes, thoracic openers.\n\nKeep it light: feel better after than before.
+END:VEVENT
+BEGIN:VEVENT
+UID:20260505-1055464054@trainingplan
+DTSTAMP:20260221T120000Z
+DTSTART;TZID=Europe/London:20260505T120000
+DTEND;TZID=Europe/London:20260505T125500
+SUMMARY:Bike: Sharpen 2x8' (55 min)
+DESCRIPTION:Goal: Sharpen without fatigue.\n\nWarm-up: 10 min easy\nMain set: 2x8 min Tempo to Hard (RPE 6-7) with 6 min easy. Stop while it feels easy.\nCool-down: 5-10 min very easy.\n\nRPE guide: Easy 3-4 (full sentences). Tempo 5-6 (short sentences). Hard 7-8 (few words).\nOptional power targets (FTP~130W): Easy 90-110W. Tempo 110-125W. Hard 125-140W.\nCadence: flats 80-90 rpm. Climbs 75-85 rpm. Shift early. Keep climbs smooth (avoid surges).\nFueling: <90 min water. >=90 min aim 30-60 g carbs/hour plus water and electrolytes. Start within 20 min then every ~15 min.
+END:VEVENT
+BEGIN:VEVENT
+UID:20260506-3998231082@trainingplan
+DTSTAMP:20260221T120000Z
+DTSTART;TZID=Europe/London:20260506T120000
+DTEND;TZID=Europe/London:20260506T124500
+SUMMARY:Walk: Brisk 45 min
+DESCRIPTION:Walk 45 min brisk but comfortable.\nOptional: add 5x30s quicker strides with full recovery.\n\nPurpose: low-stress calorie burn and recovery support.
+END:VEVENT
+BEGIN:VEVENT
+UID:20260507-5935382520@trainingplan
+DTSTAMP:20260221T120000Z
+DTSTART;TZID=Europe/London:20260507T120000
+DTEND;TZID=Europe/London:20260507T124500
+SUMMARY:Bike: Easy 45 min + 5x1' (45 min)
+DESCRIPTION:Goal: Easy with a few sparks.\n\nWarm-up: 10 min easy\nMain set: Ride easy 45 min. Include 5x1 min brisk (RPE 6-7) with 2 min easy.\nCool-down: 5-10 min very easy.\n\nRPE guide: Easy 3-4 (full sentences). Tempo 5-6 (short sentences). Hard 7-8 (few words).\nOptional power targets (FTP~130W): Easy 90-110W. Tempo 110-125W. Hard 125-140W.\nCadence: flats 80-90 rpm. Climbs 75-85 rpm. Shift early. Keep climbs smooth (avoid surges).\nFueling: <90 min water. >=90 min aim 30-60 g carbs/hour plus water and electrolytes. Start within 20 min then every ~15 min.
+END:VEVENT
+BEGIN:VEVENT
+UID:20260508-9859383735@trainingplan
+DTSTAMP:20260221T120000Z
+DTSTART;TZID=Europe/London:20260508T120000
+DTEND;TZID=Europe/London:20260508T122000
+SUMMARY:Mobility / Recovery
+DESCRIPTION:Recovery and mobility (15-25 min)\n1) Hip flexor lunge stretch 60s/side\n2) Calf stretch (straight and bent knee) 60s/side\n3) Glute/piriformis stretch 60s/side\n4) Thoracic open book 8 reps/side\n5) Hamstring floss 10 reps/side\n6) Child's pose to cobra flow 8 slow reps\n\nOptional: easy walk 15-30 min if you want to move.
+END:VEVENT
+BEGIN:VEVENT
+UID:20260509-7438737371@trainingplan
+DTSTAMP:20260221T120000Z
+DTSTART;TZID=Europe/London:20260509T090000
+DTEND;TZID=Europe/London:20260509T093000
+SUMMARY:Easy Spin 30 min
+DESCRIPTION:Optional easy spin 30 min (RPE 2-3). Cadence 85-95 rpm.\nIf tired: swap for a gentle walk or full rest.
+END:VEVENT
+BEGIN:VEVENT
+UID:20260510-4142359485@trainingplan
+DTSTAMP:20260221T120000Z
+DTSTART;TZID=Europe/London:20260510T160000
+DTEND;TZID=Europe/London:20260510T164500
+SUMMARY:Bike: Easy Ride 45 min
+DESCRIPTION:Goal: Endurance and pacing.\n\nWarm-up: 10 min easy (RPE 3-4)\nMain set: Ride 45 min mostly easy (RPE 3-4). On climbs cap at RPE 6-7 and keep cadence 75-85 rpm.\nCool-down: 5-10 min very easy.\n\nRPE guide: Easy 3-4 (full sentences). Tempo 5-6 (short sentences). Hard 7-8 (few words).\nOptional power targets (FTP~130W): Easy 90-110W. Tempo 110-125W. Hard 125-140W.\nCadence: flats 80-90 rpm. Climbs 75-85 rpm. Shift early. Keep climbs smooth (avoid surges).\nFueling: <90 min water. >=90 min aim 30-60 g carbs/hour plus water and electrolytes. Start within 20 min then every ~15 min.
+END:VEVENT
+BEGIN:VEVENT
+UID:20260511-6009836756@trainingplan
+DTSTAMP:20260221T120000Z
+DTSTART;TZID=Europe/London:20260511T120000
+DTEND;TZID=Europe/London:20260511T122500
+SUMMARY:Core + Mobility (25 min)
+DESCRIPTION:Core + mobility 25 min.\nCore: plank 3x30-45s, side plank 2x30-45s/side, dead bug 2x8/side.\nMobility: hips, calves, glutes, thoracic openers.\n\nKeep it light: feel better after than before.
+END:VEVENT
+BEGIN:VEVENT
+UID:20260512-2828352526@trainingplan
+DTSTAMP:20260221T120000Z
+DTSTART;TZID=Europe/London:20260512T120000
+DTEND;TZID=Europe/London:20260512T124000
+SUMMARY:Bike: Easy 40 min (event week)
+DESCRIPTION:Easy spin 40 min (RPE 2-3). Include 4x20s high cadence (95-105 rpm) with plenty of easy.\n\nPurpose: stay loose, not tired.
+END:VEVENT
+BEGIN:VEVENT
+UID:20260513-5076102174@trainingplan
+DTSTAMP:20260221T120000Z
+DTSTART;TZID=Europe/London:20260513T120000
+DTEND;TZID=Europe/London:20260513T124000
+SUMMARY:Bike: Primer 3x3' (40 min)
+DESCRIPTION:Goal: Leg wake-up.\n\nWarm-up: 10 min easy\nMain set: 3x3 min Hard (RPE 7) with 4 min very easy between. Keep it controlled.\nCool-down: 5-10 min very easy.\n\nThis is a primer. Finish feeling sharper, not smashed.\n\nRPE guide: Easy 3-4 (full sentences). Tempo 5-6 (short sentences). Hard 7-8 (few words).\nOptional power targets (FTP~130W): Easy 90-110W. Tempo 110-125W. Hard 125-140W.\nCadence: flats 80-90 rpm. Climbs 75-85 rpm. Shift early. Keep climbs smooth (avoid surges).\nFueling: <90 min water. >=90 min aim 30-60 g carbs/hour plus water and electrolytes. Start within 20 min then every ~15 min.
+END:VEVENT
+BEGIN:VEVENT
+UID:20260514-5520044595@trainingplan
+DTSTAMP:20260221T120000Z
+DTSTART;TZID=Europe/London:20260514T120000
+DTEND;TZID=Europe/London:20260514T123000
+SUMMARY:Bike: Easy 30 min
+DESCRIPTION:Easy spin 30 min (RPE 2-3). Cadence 85-95 rpm. Stop if any niggles.
+END:VEVENT
+BEGIN:VEVENT
+UID:20260515-9859383735@trainingplan
+DTSTAMP:20260221T120000Z
+DTSTART;TZID=Europe/London:20260515T120000
+DTEND;TZID=Europe/London:20260515T122500
+SUMMARY:Mobility / Recovery
+DESCRIPTION:Recovery and mobility (15-25 min)\n1) Hip flexor lunge stretch 60s/side\n2) Calf stretch (straight and bent knee) 60s/side\n3) Glute/piriformis stretch 60s/side\n4) Thoracic open book 8 reps/side\n5) Hamstring floss 10 reps/side\n6) Child's pose to cobra flow 8 slow reps\n\nOptional: easy walk 15-30 min if you want to move.
+END:VEVENT
+BEGIN:VEVENT
+UID:20260516-2345308533@trainingplan
+DTSTAMP:20260221T120000Z
+DTSTART;TZID=Europe/London:20260516T090000
+DTEND;TZID=Europe/London:20260516T092000
+SUMMARY:Pre-Ride Opener 20 min
+DESCRIPTION:Pre-ride opener 20 min.\n\n10 min very easy.\nThen 3x20s high cadence (100+ rpm) with 2 min easy.\nFinish 5 min easy.\n\nPurpose: wake the legs, not tire them.
+END:VEVENT
+BEGIN:VEVENT
+UID:20260517-2309339660@trainingplan
+DTSTAMP:20260221T120000Z
+DTSTART;TZID=Europe/London:20260517T160000
+DTEND;TZID=Europe/London:20260517T203000
+SUMMARY:Event: 100 km Hilly Ride
+DESCRIPTION:Today is the day.\n\nPlan:\n• Start easy for the first 30-45 min.\n• Climbs: cap effort at RPE 6-7 (do not gasp early).\n• Cadence: aim 75-85 rpm on climbs. Spin whenever possible.\n• Fuel: 60-80 g carbs/hour if tolerated plus electrolytes. Start within 20 min and keep the drip-feed.\n• Drink little and often.\n\nAfter:\n• 10 min easy spin or walk if possible.\n• Eat a proper meal with carbs plus protein.\n• Gentle stretching (hips, calves, lower back).
+END:VEVENT
+END:VCALENDAR
